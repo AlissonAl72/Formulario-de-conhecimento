@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe de Verão Perfeita | Quebrando o Gelo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: 
+                linear-gradient(rgba(253, 230, 138, 0.2), rgba(253, 230, 138, 0.2)),
+                url('https://images.unsplash.com/photo-1597848212624-a19eb35e2651?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #431407;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 40px 0 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #ea580c;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.9);
+        }
+
+        header p {
+            color: #78350f;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        form {
+            background-color: rgba(255, 253, 240, 0.97); 
+            padding: 50px 40px;
+            border-radius: 28px;
+            border: 3px solid #fde047;
+            box-shadow: 0 25px 50px -12px rgba(194, 65, 12, 0.4);
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #b45309;
+            font-size: 1.1rem;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: 14px;
+            border: 2px solid #fcd34d;
+            background-color: #ffffff;
+            color: #431407;
+            font-size: 1.05rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #f97316;
+            background-color: #fffbeb;
+            box-shadow: 0 0 18px rgba(249, 115, 22, 0.25);
+            transform: translateY(-3px);
+        }
+
+        ::placeholder {
+            color: #a8a29e;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: linear-gradient(135deg, #ea580c, #eab308);
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 12px 24px -6px rgba(234, 88, 12, 0.5);
+        }
+
+        .btn-enviar:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 30px -6px rgba(234, 88, 12, 0.7);
+            background: linear-gradient(135deg, #f97316, #facc15);
+        }
+
+        @media (max-width: 650px) {
+            form { padding: 30px 20px; }
+            h1 { font-size: 2.2rem; }
+            body { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Diga-me mais🌻☀️</h1>
+            <p>Vai ficar salvo para futuras consultas</p>
+        </header>
+
+        <main>
+            <form id="formulario-de-conhecimento">
+                
+                <div class="form-group">
+                    <label for="nome">👦👩 Como você se chama? (Ou qual seu apelido?)</label>
+                    <input type="text" id="nome" name="Nome" placeholder="Seu nome..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cor">🎨 Qual é a sua cor favorita?</label>
+                    <input type="text" id="cor" name="Cor Favorita" placeholder="Ex: Azul escuro, Laranja..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="flor">🌸 Qual flor você acha mais bonita?</label>
+                    <input type="text" id="flor" name="Flor Favorita" placeholder="Rosa, girassol, margarida..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">🐾 Qual seu animal favorito?</label>
+                    <input type="text" id="animal" name="Animal Favorito" placeholder="Cachorro, gato, pássaro..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comida">🍕 Qual é a sua 'comfort food'?</label>
+                    <textarea id="comida" name="Comfort Food" placeholder="Aquela comida que sempre te deixa feliz..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="doce">🍰 Você é mais doce ou salgado?</label>
+                    <input type="text" id="doce" name="Doce ou Salgado" placeholder="Team sorvete ou team batata frita?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bebida">🍹 Qual bebida você sempre escolhe?</label>
+                    <input type="text" id="bebida" name="Bebida Favorita" placeholder="Suco natural, água de coco, café..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="filme">🎬 Um filme ou série que você veria de novo agora mesmo?</label>
+                    <input type="text" id="filme" name="Filme ou Serie" placeholder="Manda a boa..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="musica">🎧 O que não sai do seu fone de ouvido ultimamente?</label>
+                    <input type="text" id="musica" name="Musica" placeholder="Banda, cantor, estilo..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sonho">💭 Um sonho que você quer realizar nos próximos anos?</label>
+                    <textarea id="sonho" name="Sonho" placeholder="Me conta algo grande..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">💘 O que você mais valoriza em alguém?</label>
+                    <textarea id="valor" name="Valor em Relacionamento" placeholder="Lealdade? Carinho? Bom humor?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">🚀 Enviar Respostas</button>
+            </form>
+        </main>
+    </div>
+
+    <script type="module">
+        // 1. Importando direto dos servidores do Google (formato correto para HTML puro)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        // 2. Suas chaves (mantive as que você mandou)
+        const firebaseConfig = {
+            apiKey: "AIzaSyAfr-6mzTmev3FDvnYopoa4isZd5nuOIL8",
+            authDomain: "formulario-de-conhecimento.firebaseapp.com",
+            projectId: "formulario-de-conhecimento",
+            storageBucket: "formulario-de-conhecimento.firebasestorage.app",
+            messagingSenderId: "941821426572",
+            appId: "1:941821426572:web:45a25b9540553a8532b4a9",
+            measurementId: "G-TFX2FDBWJH"
+        };
+
+        // 3. Ligando o motor do Firebase e do Banco de Dados
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 4. Pegando o formulário pelo ID exato que tá no HTML
+        const form = document.getElementById('formulario-de-conhecimento');
+
+        // 5. Função de envio
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+
+            const btn = document.querySelector('.btn-enviar');
+            btn.innerText = "⏳ Mandando pra nuvem...";
+
+            try {
+                // Envia pro banco de dados
+                await addDoc(collection(db, "respostas_gelo"), {
+                    nome: document.getElementById('nome').value,
+                    cor: document.getElementById('cor').value,
+                    flor: document.getElementById('flor').value,
+                    animal: document.getElementById('animal').value,
+                    comida: document.getElementById('comida').value,
+                    doce: document.getElementById('doce').value,
+                    bebida: document.getElementById('bebida').value,
+                    filme: document.getElementById('filme').value,
+                    musica: document.getElementById('musica').value,
+                    sonho: document.getElementById('sonho').value,
+                    valor: document.getElementById('valor').value,
+                    data_envio: new Date() 
+                });
+
+                alert("Mandou bem! Respostas salvas com sucesso! 🌻");
+                form.reset(); 
+                btn.innerText = "🚀 Enviar Respostas";
+
+            } catch (error) {
+                console.error("Erro ao salvar: ", error);
+                alert("Deu ruim na hora de enviar. Verifique se o banco de dados do Firebase está criado e em 'Modo de Teste'.");
+                btn.innerText = "🚀 Enviar Respostas";
+            }
+        });
+    </script>
+</body>
+</html>
